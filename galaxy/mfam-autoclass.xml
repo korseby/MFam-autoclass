@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tool id="mfam-autoclass" name="mfam-autoclass" version="1.0">
+  <requirements>
+    <container type="docker">korseby/mfam-autoclass</container>
+  </requirements>
+  <description>Apply the MFam Classifier on all the spectra found in a MSP file</description>
+  <stdio>
+    <regex match="" source="stderr" level="warning" description="R messages" />
+    <exit_code range="1:" level="fatal" description="Tool error" />
+  </stdio>
+  <command><![CDATA[
+echo "working-dir: /tmp";
+echo "mfam-dir: /usr/local/share/MFam";
+echo "metfamily-dir: /usr/local/share/MetFamily";
+echo "working-dir: /tmp";
+echo "working-dir: /tmp";
+echo "working-dir: /tmp";
+echo "polarity: $polarity";
+echo "input-msp: $input-msp";
+echo "input-classes: $input-classes";
+echo "minimumIntensityOfMaximalMS2peak: $minimumIntensityOfMaximalMS2peak";
+echo "minimumProportionOfMS2peaks: $minimumProportionOfMS2peaks";
+echo "mzDeviationAbsolute: $mzDeviationAbsolute-grouping";
+echo "mzDeviationInPPM-grouping: $mzDeviationInPPM-grouping";
+echo "doPrecursorDeisotoping: $doPrecursorDeisotoping";
+echo "mzDeviationAbsolute-precursorDeisotoping: $mzDeviationAbsolute-precursorDeisotoping";
+echo "mzDeviationInPPM-precursorDeisotoping: $mzDeviationInPPM-precursorDeisotoping";
+echo "maximumRtDifference: $maximumRtDifference";
+echo "doMs2PeakGroupDeisotoping: $doMs2PeakGroupDeisotoping";
+echo "mzDeviationAbsolute-ms2PeakGroupDeisotoping: $mzDeviationAbsolute-ms2PeakGroupDeisotoping";
+echo "mzDeviationInPPM-ms2PeakGroupDeisotoping: $mzDeviationInPPM-ms2PeakGroupDeisotoping";
+echo "proportionOfMatchingPeaks-ms2PeakGroupDeisotoping: $proportionOfMatchingPeaks-ms2PeakGroupDeisotoping";
+echo "mzDeviationAbsolute-mapping: $mzDeviationAbsolute-mapping";
+echo "minimumNumberOfMS2PeaksPerGroup: $minimumNumberOfMS2PeaksPerGroup";
+echo "neutralLossesPrecursorToFragments: $neutralLossesPrecursorToFragments";
+echo "neutralLossesFragmentsToFragments: $neutralLossesFragmentsToFragments";
+echo "output-plot-class-abundance: $output-plot-class-abundance";
+echo "output-summary: $output-summary";
+echo "output-validation: $output-validation";
+echo "output-rdata: $output-rdata";
+
+mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $polarity $input-msp $input-classes $minimumIntensityOfMaximalMS2peak $minimumProportionOfMS2peaks $mzDeviationAbsolute-grouping $mzDeviationInPPM-grouping $doPrecursorDeisotoping $mzDeviationAbsolute-precursorDeisotoping $mzDeviationInPPM-precursorDeisotoping $maximumRtDifference $doMs2PeakGroupDeisotoping $mzDeviationAbsolute-ms2PeakGroupDeisotoping $mzDeviationInPPM-ms2PeakGroupDeisotoping $proportionOfMatchingPeaks-ms2PeakGroupDeisotoping $mzDeviationAbsolute-mapping $minimumNumberOfMS2PeaksPerGroup $neutralLossesPrecursorToFragments $neutralLossesFragmentsToFragments $output-plot-class-abundance $output-summary $output-validation $output-rdata;
+  ]]>
+  </command>
+  <inputs>
+    <param name="polarity" type="select" value="positive" optional="False" label="Polarity" help="The polarity used for the mode of acquisition">
+      <option value="positive" selected="True">positive</option>
+      <option value="negative">negative</option>
+    </param>
+    
+    <param name="input-msp" type="data" format="txt" optional="False" label="MSP file" help="The MSP file that contains the MS2 spectra to be classified" />
+    <param name="input-classes" type="data" format="txt" optional="False" label="Compound classes reference file" help="File containing the reference set of compound classes to which spectra are investigated to" />
+    
+    <param name="minimumIntensityOfMaximalMS2peak" type="text" value="10" optional="False" label="Minimum intensity of maximal MS2 peak" help="The minimum intensity a MS2 peak must have with regard to the maximal MS2 peak" />
+    <param name="minimumProportionOfMS2peaks" type="text" value="0.005" optional="False" label="Minimum proportion of MS2 peaks" help="Minimum proportion of MS2 peaks" />
+    <param name="mzDeviationAbsolute-grouping" type="text" value="0.1" optional="False" label="mz deviation for absolute grouping" help="mz deviation for absolute grouping" />
+    <param name="mzDeviationInPPM_grouping" type="text" value="500" optional="False" label="mz deviation in ppm for grouping" help="mz deviation in ppm for grouping" />
+    
+    <param name="maximumRtDifference" type="text" value="0.02" optional="False" label="maximum rt difference" help="maximum retention time difference" />
+    
+    <param name="mzDeviationAbsolute-mapping" type="text" value="0.01" optional="False" label="mz deviation for absolute mapping" help="mz deviation for absolute mapping" />
+    <param name="minimumNumberOfMS2PeaksPerGroup" type="text" value="1" optional="False" label="Minimum number of MS2 peaks per group" help="Minimum number of MS2 peaks per group" />
+    
+    <param name="doPrecursorDeisotoping" type="select" value="True" optional="False" label="Do precursor deisotoping?" help="Enable precursor deisotoping">
+      <option value="True" selected="True">True</option>
+      <option value="False">False</option>
+    </param>
+    <param name="mzDeviationAbsolute-precursorDeisotoping" type="text" value="0.001" optional="False" label="mz deviation for absolute precursor deisotoping" help="mz deviation for absolute precursor deisotoping" />
+    <param name="mzDeviationInPPM-precursorDeisotoping" type="text" value="10" optional="False" label="mz deviation in ppm for precursor deisotoping" help="mz deviation in ppm for precursor deisotoping" />
+        
+    <param name="doMs2PeakGroupDeisotoping" type="select" value="True" optional="False" label="Do MS2 peak group deisotoping?" help="Enable MS2 peak group deisotoping">
+      <option value="True" selected="True">True</option>
+      <option value="False">False</option>
+    </param>
+    <param name="mzDeviationAbsolute-ms2PeakGroupDeisotoping" type="text" value="0.01" optional="False" label="mz deviation for absolute MS2 peak group deisotoping" help="mz deviation for absolute MS2 peak group deisotoping" />
+    <param name="mzDeviationInPPM-ms2PeakGroupDeisotoping" type="text" value="10" optional="False" label="mz deviation in ppm for MS2 peak group deisotoping" help="mz deviation in ppm for MS2 peak group deisotoping" />
+    <param name="proportionOfMatchingPeaks-ms2PeakGroupDeisotoping" type="text" value="0.9" optional="False" label="Proportion of matching peaks for MS2 peak group deisotoping" help="Proportion of matching peaks for MS2 peak group deisotoping" />
+        
+    <param name="neutralLossesPrecursorToFragments" type="select" value="True" optional="False" label="Map neutral losses of precursor to fragments?" help="Enable mapping of neutral losses precursor to fragments">
+      <option value="True" selected="True">True</option>
+      <option value="False">False</option>
+    </param>
+    
+    <param name="neutralLossesFragmentsToFragments" type="select" value="False" optional="False" label="Map neutral losses of fragments to fragments?" help="Enable mapping of neutral losses of fragments to fragments">
+      <option value="True">True</option>
+      <option value="False" selected="True">False</option>
+    </param>
+  </inputs>
+  
+  <outputs>
+    <data name="output-plot-class-abundance" type="data" format="pdf" label="${input-msp.display_name}_mfam_autoclass_abundance_plot.pdf" />
+    <data name="output-summary" type="data" format="txt" label="${input-msp.display_name}_mfam_autoclass_summary.txt" />
+    <data name="output-validation" type="data" format="tsv" label="${input-msp.display_name}_mfam_autoclass_validation.tsv" />
+    <data name="output_rdata" type="data" format="txt" label="${input-msp.display_name}_mfam_autoclass.rdata" />
+  </outputs>
+  <help>
+.. class:: infomark
+
+**Authors**
+
+| **Kristian Peters (kpeters@ipb-halle.de)** wrote and maintains this module.
+
+---------------------------------------------------
+
+=======================
+MFam Autoclassification
+=======================
+
+-----------
+Description
+-----------
+
+| Apply the MFam Classifier to on all the spectra found in a MSP file. The MFam Classifier is applied per sample and then joined afterwards.
+
+-----------
+Input files
+-----------
+
++---------------------------------------------+------------+
+| File                                        |   Format   |
++=============================================+============+
+| 1)  MSP file                                |   MSP      |
+| 2)  Compound classes reference text file    |   TXT      |
++---------------------------------------------+------------+
+
+----------
+Parameters
+----------
+	  
+Polarity
+        | The polarity used for the mode of acquisition.
+        |
+
+------------
+Output files
+------------
+
++----------------------------------------------------------+--------+
+| Files                                                    | Format |
++==========================================================+========+
+| 1) Plot containing the abundance of compound classes     |  PDF   |
+| 2) MFam autoclassification summary                       |  TXT   |
+| 3) MFam classifier validation table                      |  TSV   |
+| 4) MFam classifier R-Data                                | RData  |
++----------------------------------------------------------+--------+
+
+---------------------------------------------------
+
+-------
+Changes
+-------
+
+Version: 1.0
+| Initial release
+
+  </help>
+</tool>
+

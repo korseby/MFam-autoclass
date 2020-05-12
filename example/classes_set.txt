@@ -1,0 +1,759 @@
+Alkaloids and derivatives:
+Organic compounds/Alkaloids and derivatives
+Beispiel: None
+
+Benzenoids:
+Organic compounds/Benzenoids
+Beispiel: None
+
+Anthracenes:
+Organic compounds/Benzenoids/Anthracenes
+Beispiel: None
+
+Benzene and substituted derivatives:
+Organic compounds/Benzenoids/Benzene and substituted derivatives
+Beispiel: None
+
+Aniline and substituted anilines:
+Organic compounds/Benzenoids/Benzene and substituted derivatives/Aniline and substituted anilines
+Beispiel: None
+
+Benzenesulfonic acids and derivatives:
+Organic compounds/Benzenoids/Benzene and substituted derivatives/Benzenesulfonic acids and derivatives
+Beispiel: None
+
+Benzoic acids and derivatives:
+Organic compounds/Benzenoids/Benzene and substituted derivatives/Benzoic acids and derivatives
+Beispiel: None
+
+Benzoyl derivatives:
+Organic compounds/Benzenoids/Benzene and substituted derivatives/Benzoyl derivatives
+Beispiel: None
+
+Benzyl alcohols:
+Organic compounds/Benzenoids/Benzene and substituted derivatives/Benzyl alcohols
+Beispiel: None
+
+Phenethylamines:
+Organic compounds/Benzenoids/Benzene and substituted derivatives/Phenethylamines
+Beispiel: None
+
+Phenylacetaldehydes:
+Organic compounds/Benzenoids/Benzene and substituted derivatives/Phenylacetaldehydes
+Beispiel: None
+
+Phenylacetic acids:
+Organic compounds/Benzenoids/Benzene and substituted derivatives/Phenylacetic acids
+Beispiel: None
+
+Phenylmethylamines:
+Organic compounds/Benzenoids/Benzene and substituted derivatives/Phenylmethylamines
+Beispiel: None
+
+Phenylpyruvic acid derivatives:
+Organic compounds/Benzenoids/Benzene and substituted derivatives/Phenylpyruvic acid derivatives
+Beispiel: None
+
+Naphthalenes:
+Organic compounds/Benzenoids/Naphthalenes
+Beispiel: None
+
+Naphthalenecarboxylic acids and derivatives:
+Organic compounds/Benzenoids/Naphthalenes/Naphthalenecarboxylic acids and derivatives
+Beispiel: None
+
+Phenol esters:
+Organic compounds/Benzenoids/Phenol esters
+Beispiel: None
+
+Phenols:
+Organic compounds/Benzenoids/Phenols
+Beispiel: None
+
+Benzenediols:
+Organic compounds/Benzenoids/Phenols/Benzenediols
+Beispiel: None
+
+Methoxyphenols:
+Organic compounds/Benzenoids/Phenols/Methoxyphenols
+Beispiel: None
+
+Lipids and lipid-like molecules:
+Organic compounds/Lipids and lipid-like molecules
+Beispiel: None
+
+Fatty Acyls:
+Organic compounds/Lipids and lipid-like molecules/Fatty Acyls
+Beispiel: None
+
+Fatty acid esters:
+Organic compounds/Lipids and lipid-like molecules/Fatty Acyls/Fatty acid esters
+Beispiel: None
+
+Fatty acids and conjugates:
+Organic compounds/Lipids and lipid-like molecules/Fatty Acyls/Fatty acids and conjugates
+Beispiel: None
+
+Fatty acyl thioesters:
+Organic compounds/Lipids and lipid-like molecules/Fatty Acyls/Fatty acyl thioesters
+Beispiel: None
+
+Fatty alcohols:
+Organic compounds/Lipids and lipid-like molecules/Fatty Acyls/Fatty alcohols
+Beispiel: None
+
+Lineolic acids and derivatives:
+Organic compounds/Lipids and lipid-like molecules/Fatty Acyls/Lineolic acids and derivatives
+Beispiel: None
+
+Diradylglycerols:
+Organic compounds/Lipids and lipid-like molecules/Glycerolipids
+Beispiel: None
+
+Diradylglycerols:
+Organic compounds/Lipids and lipid-like molecules/Glycerolipids/Diradylglycerols
+Beispiel: None
+
+Monoradylglycerols:
+Organic compounds/Lipids and lipid-like molecules/Glycerolipids/Monoradylglycerols
+Beispiel: None
+
+Triradylcglycerols:
+Organic compounds/Lipids and lipid-like molecules/Glycerolipids/Triradylcglycerols
+Beispiel: None
+
+Glycerophospholipids:
+Organic compounds/Lipids and lipid-like molecules/Glycerophospholipids
+Beispiel: None
+
+Glycerophosphates:
+Organic compounds/Lipids and lipid-like molecules/Glycerophospholipids/Glycerophosphates
+Beispiel: None
+
+Glycerophosphocholines:
+Organic compounds/Lipids and lipid-like molecules/Glycerophospholipids/Glycerophosphocholines
+Beispiel: None
+
+Glycerophosphoethanolamines:
+Organic compounds/Lipids and lipid-like molecules/Glycerophospholipids/Glycerophosphoethanolamines
+Beispiel: None
+
+Isoprenoid phosphates:
+Organic compounds/Lipids and lipid-like molecules/Prenol lipids
+Beispiel: None
+
+Diterpenoids:
+Organic compounds/Lipids and lipid-like molecules/Prenol lipids/Diterpenoids
+Beispiel: DNJVYWXIDISQRD-HWUKTEKMSA-N
+
+Isoprenoid phosphates:
+Organic compounds/Lipids and lipid-like molecules/Prenol lipids/Isoprenoid phosphates
+Beispiel: None
+
+Monoterpenoids:
+Organic compounds/Lipids and lipid-like molecules/Prenol lipids/Monoterpenoids
+Beispiel: NQICGNSARVCSGJ-UHFFFAOYSA-N
+
+Quinone and hydroquinone lipids:
+Organic compounds/Lipids and lipid-like molecules/Prenol lipids/Quinone and hydroquinone lipids
+Beispiel: None
+
+Retinoids:
+Organic compounds/Lipids and lipid-like molecules/Prenol lipids/Retinoids
+Beispiel: None
+
+Sesquiterpenoids:
+Organic compounds/Lipids and lipid-like molecules/Prenol lipids/Sesquiterpenoids
+Beispiel: FAMPSKZZVDUYOS-HRGUGZIWSA-N
+
+Sesterterpenoids:
+Organic compounds/Lipids and lipid-like molecules/Prenol lipids/Sesterterpenoids
+Beispiel: None
+
+Tetraterpenoids:
+Organic compounds/Lipids and lipid-like molecules/Prenol lipids/Tetraterpenoids
+Beispiel: None
+
+Triterpenoids:
+Organic compounds/Lipids and lipid-like molecules/Prenol lipids/Triterpenoids
+Beispiel: None
+
+Sphingolipids:
+Organic compounds/Lipids and lipid-like molecules/Sphingolipids
+Beispiel: None
+
+Phosphosphingolipids:
+Organic compounds/Lipids and lipid-like molecules/Sphingolipids/Phosphosphingolipids
+Beispiel: None
+
+Steroids and steroid derivatives:
+Organic compounds/Lipids and lipid-like molecules/Steroids and steroid derivatives
+Beispiel: None
+
+Bile acids, alcohols and derivatives:
+Organic compounds/Lipids and lipid-like molecules/Steroids and steroid derivatives/Bile acids, alcohols and derivatives
+Beispiel: None
+
+Cholestane steroids:
+Organic compounds/Lipids and lipid-like molecules/Steroids and steroid derivatives/Cholestane steroids
+Beispiel: None
+
+Estrane steroids:
+Organic compounds/Lipids and lipid-like molecules/Steroids and steroid derivatives/Estrane steroids
+Beispiel: None
+
+Hydroxysteroids:
+Organic compounds/Lipids and lipid-like molecules/Steroids and steroid derivatives/Hydroxysteroids
+Beispiel: None
+
+Pregnane steroids:
+Organic compounds/Lipids and lipid-like molecules/Steroids and steroid derivatives/Pregnane steroids
+Beispiel: None
+
+Steroid esters:
+Organic compounds/Lipids and lipid-like molecules/Steroids and steroid derivatives/Steroid esters
+Beispiel: None
+
+Sulfated steroids:
+Organic compounds/Lipids and lipid-like molecules/Steroids and steroid derivatives/Sulfated steroids
+Beispiel: None
+
+Vitamin D and derivatives:
+Organic compounds/Lipids and lipid-like molecules/Steroids and steroid derivatives/Vitamin D and derivatives
+Beispiel: None
+
+Nucleosides, nucleotides, and analogues:
+Organic compounds/Nucleosides, nucleotides, and analogues
+Beispiel: None
+
+(5'->5')-dinucleotides:
+Organic compounds/Nucleosides, nucleotides, and analogues/(5'->5')-dinucleotides
+Beispiel: None
+
+5'-deoxyribonucleosides:
+Organic compounds/Nucleosides, nucleotides, and analogues/5'-deoxyribonucleosides
+Beispiel: None
+
+5'-deoxy-5'-thionucleosides:
+Organic compounds/Nucleosides, nucleotides, and analogues/5'-deoxyribonucleosides/5'-deoxy-5'-thionucleosides
+Beispiel: None
+
+Flavin nucleotides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Flavin nucleotides
+Beispiel: None
+
+1-ribosyl-imidazolecarboxamides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Imidazole ribonucleosides and ribonucleotides/1-ribosyl-imidazolecarboxamides
+Beispiel: None
+
+Purine nucleosides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Purine nucleosides
+Beispiel: None
+
+Purine 2'-deoxyribonucleosides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Purine nucleosides/Purine 2'-deoxyribonucleosides
+Beispiel: None
+
+Cyclic purine nucleotides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Purine nucleotides/Cyclic purine nucleotides
+Beispiel: None
+
+Purine deoxyribonucleotides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Purine nucleotides/Purine deoxyribonucleotides
+Beispiel: None
+
+Purine nucleotide sugars:
+Organic compounds/Nucleosides, nucleotides, and analogues/Purine nucleotides/Purine nucleotide sugars
+Beispiel: None
+
+Purine ribonucleotides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Purine nucleotides/Purine ribonucleotides
+Beispiel: None
+
+Nicotinamide nucleotides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Pyridine nucleotides/Nicotinamide nucleotides
+Beispiel: None
+
+Pyrimidine nucleosides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Pyrimidine nucleosides
+Beispiel: None
+
+Pyrimidine 2'-deoxyribonucleosides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Pyrimidine nucleosides/Pyrimidine 2'-deoxyribonucleosides
+Beispiel: None
+
+Cyclic pyrimidine nucleotides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Pyrimidine nucleotides/Cyclic pyrimidine nucleotides
+Beispiel: None
+
+Pyrimidine deoxyribonucleotides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Pyrimidine nucleotides/Pyrimidine deoxyribonucleotides
+Beispiel: None
+
+Pyrimidine nucleotide sugars:
+Organic compounds/Nucleosides, nucleotides, and analogues/Pyrimidine nucleotides/Pyrimidine nucleotide sugars
+Beispiel: None
+
+Pyrimidine ribonucleotides:
+Organic compounds/Nucleosides, nucleotides, and analogues/Pyrimidine nucleotides/Pyrimidine ribonucleotides
+Beispiel: None
+
+Organic acids and derivatives:
+Organic compounds/Organic acids and derivatives
+Beispiel: None
+
+Carboximidic acids and derivatives:
+Organic compounds/Organic acids and derivatives/Carboximidic acids and derivatives
+Beispiel: None
+
+Carboximidic acids:
+Organic compounds/Organic acids and derivatives/Carboximidic acids and derivatives/Carboximidic acids
+Beispiel: None
+
+Carboxylic acids and derivatives:
+Organic compounds/Organic acids and derivatives/Carboxylic acids and derivatives
+Beispiel: None
+
+Acrylic acids and derivatives:
+Organic compounds/Organic acids and derivatives/Carboxylic acids and derivatives/Acrylic acids and derivatives
+Beispiel: None
+
+Amino acids, peptides, and analogues:
+Organic compounds/Organic acids and derivatives/Carboxylic acids and derivatives/Amino acids, peptides, and analogues
+Beispiel: None
+
+Carboxylic acid derivatives:
+Organic compounds/Organic acids and derivatives/Carboxylic acids and derivatives/Carboxylic acid derivatives
+Beispiel: None
+
+Carboxylic acids:
+Organic compounds/Organic acids and derivatives/Carboxylic acids and derivatives/Carboxylic acids
+Beispiel: None
+
+Dicarboxylic acids and derivatives:
+Organic compounds/Organic acids and derivatives/Carboxylic acids and derivatives/Dicarboxylic acids and derivatives
+Beispiel: None
+
+Peptides:
+Organic compounds/Organic acids and derivatives/Carboxylic acids and derivatives/Amino acids, peptides, and analogues/Peptides
+Beispiel: VNOANHYDUCYECY-NKUPXLAWSA-N
+
+Tricarboxylic acids and derivatives:
+Organic compounds/Organic acids and derivatives/Carboxylic acids and derivatives/Tricarboxylic acids and derivatives
+Beispiel: None
+
+Hydroxy acids and derivatives:
+Organic compounds/Organic acids and derivatives/Hydroxy acids and derivatives
+Beispiel: None
+
+Alpha hydroxy acids and derivatives:
+Organic compounds/Organic acids and derivatives/Hydroxy acids and derivatives/Alpha hydroxy acids and derivatives
+Beispiel: None
+
+Beta hydroxy acids and derivatives:
+Organic compounds/Organic acids and derivatives/Hydroxy acids and derivatives/Beta hydroxy acids and derivatives
+Beispiel: None
+
+Medium-chain hydroxy acids and derivatives:
+Organic compounds/Organic acids and derivatives/Hydroxy acids and derivatives/Medium-chain hydroxy acids and derivatives
+Beispiel: None
+
+Keto acids and derivatives:
+Organic compounds/Organic acids and derivatives/Keto acids and derivatives
+Beispiel: None
+
+Alpha-keto acids and derivatives:
+Organic compounds/Organic acids and derivatives/Keto acids and derivatives/Alpha-keto acids and derivatives
+Beispiel: None
+
+Beta-keto acids and derivatives:
+Organic compounds/Organic acids and derivatives/Keto acids and derivatives/Beta-keto acids and derivatives
+Beispiel: None
+
+Gamma-keto acids and derivatives:
+Organic compounds/Organic acids and derivatives/Keto acids and derivatives/Gamma-keto acids and derivatives
+Beispiel: None
+
+Medium-chain keto acids and derivatives:
+Organic compounds/Organic acids and derivatives/Keto acids and derivatives/Medium-chain keto acids and derivatives
+Beispiel: None
+
+Short-chain keto acids and derivatives:
+Organic compounds/Organic acids and derivatives/Keto acids and derivatives/Short-chain keto acids and derivatives
+Beispiel: None
+
+Organic carbonic acids and derivatives:
+Organic compounds/Organic acids and derivatives/Organic carbonic acids and derivatives
+Beispiel: None
+
+Ureas:
+Organic compounds/Organic acids and derivatives/Organic carbonic acids and derivatives/Ureas
+Beispiel: None
+
+Organic phosphoric acids and derivatives:
+Organic compounds/Organic acids and derivatives/Organic phosphoric acids and derivatives
+Beispiel: None
+
+Organic phosphonic acids:
+Organic compounds/Organic acids and derivatives/Organic phosphonic acids and derivatives/Organic phosphonic acids
+Beispiel: None
+
+Phosphate esters:
+Organic compounds/Organic acids and derivatives/Organic phosphoric acids and derivatives/Phosphate esters
+Beispiel: None
+
+Organic sulfonic acids and derivatives:
+Organic compounds/Organic acids and derivatives/Organic sulfonic acids and derivatives
+Beispiel: None
+
+Organosulfonic acids and derivatives:
+Organic compounds/Organic acids and derivatives/Organic sulfonic acids and derivatives/Organosulfonic acids and derivatives
+Beispiel: None
+
+Arylsulfates:
+Organic compounds/Organic acids and derivatives/Organic sulfuric acids and derivatives/Arylsulfates
+Beispiel: None
+
+Peptidomimetics:
+Organic compounds/Organic acids and derivatives/Peptidomimetics
+Beispiel: None
+
+Hybrid peptides:
+Organic compounds/Organic acids and derivatives/Peptidomimetics/Hybrid peptides
+Beispiel: None
+
+Sulfinic acids and derivatives:
+Organic compounds/Organic acids and derivatives/Sulfinic acids and derivatives
+Beispiel: None
+
+Sulfinic acids:
+Organic compounds/Organic acids and derivatives/Sulfinic acids and derivatives/Sulfinic acids
+Beispiel: None
+
+Organic nitrogen compounds:
+Organic compounds/Organic nitrogen compounds
+Beispiel: None
+
+Organonitrogen compounds:
+Organic compounds/Organic nitrogen compounds/Organonitrogen compounds
+Beispiel: None
+
+Amines:
+Organic compounds/Organic nitrogen compounds/Organonitrogen compounds/Amines
+Beispiel: None
+
+Guanidines:
+Organic compounds/Organic nitrogen compounds/Organonitrogen compounds/Guanidines
+Beispiel: None
+
+Oximes:
+Organic compounds/Organic nitrogen compounds/Organonitrogen compounds/Oximes
+Beispiel: None
+
+Quaternary ammonium salts:
+Organic compounds/Organic nitrogen compounds/Organonitrogen compounds/Quaternary ammonium salts
+Beispiel: None
+
+Organic oxygen compounds:
+Organic compounds/Organic oxygen compounds
+Beispiel: None
+
+Organic oxoanionic compounds:
+Organic compounds/Organic oxygen compounds/Organic oxoanionic compounds
+Beispiel: None
+
+Organic pyrophosphates:
+Organic compounds/Organic oxygen compounds/Organic oxoanionic compounds/Organic pyrophosphates
+Beispiel: None
+
+Organooxygen compounds:
+Organic compounds/Organic oxygen compounds/Organooxygen compounds
+Beispiel: None
+
+Alcohols and polyols:
+Organic compounds/Organic oxygen compounds/Organooxygen compounds/Alcohols and polyols
+Beispiel: None
+
+Carbohydrates and carbohydrate conjugates:
+Organic compounds/Organic oxygen compounds/Organooxygen compounds/Carbohydrates and carbohydrate conjugates
+Beispiel: None
+
+Disaccharides
+Organic compounds/Organic oxygen compounds/Organooxygen compounds/Carbohydrates and carbohydrate conjugates/Disaccharides
+Beispiel: ISDQSHMIEKNGEA-ZJVUXDMPSA-N
+
+Glycosyl compounds:
+Organic compounds/Organic oxygen compounds/Organooxygen compounds/Carbohydrates and carbohydrate conjugates/Glycosyl compounds
+Beispiel: CZMRCDWAGMRECN-UGDNZRGBSA-N
+
+Monosaccharides:
+Organic compounds/Organic oxygen compounds/Organooxygen compounds/Carbohydrates and carbohydrate conjugates/Monosaccharides
+Beispiel: YDDGKXBLOXEEMN-WOJBJXKFSA-N
+
+Oligosaccharides
+Organic compounds/Organic oxygen compounds/Organooxygen compounds/Carbohydrates and carbohydrate conjugates/Oligosaccharides
+Beispiel: YMGLUPVUMYWGMO-DTKUAOGQSA-N
+
+Polysaccharides
+Organic compounds/Organic oxygen compounds/Organooxygen compounds/Carbohydrates and carbohydrate conjugates/Polysaccharides
+Beispiel: YMGLUPVUMYWGMO-DTKUAOGQSA-N
+
+Carbonyl compounds:
+Organic compounds/Organic oxygen compounds/Organooxygen compounds/Carbonyl compounds
+Beispiel: None
+
+Ethers:
+Organic compounds/Organic oxygen compounds/Organooxygen compounds/Ethers
+Beispiel: None
+
+Organoheterocyclic compounds:
+Organic compounds/Organoheterocyclic compounds
+Beispiel: None
+
+Azoles:
+Organic compounds/Organoheterocyclic compounds/Azoles
+Beispiel: None
+
+Imidazoles:
+Organic compounds/Organoheterocyclic compounds/Azoles/Imidazoles
+Beispiel: None
+
+Pyrazoles:
+Organic compounds/Organoheterocyclic compounds/Azoles/Pyrazoles
+Beispiel: None
+
+Benzimidazoles:
+Organic compounds/Organoheterocyclic compounds/Benzimidazoles
+Beispiel: None
+
+Biotin and derivatives:
+Organic compounds/Organoheterocyclic compounds/Biotin and derivatives
+Beispiel: None
+
+Diazines:
+Organic compounds/Organoheterocyclic compounds/Diazines
+Beispiel: None
+
+Pyrazines:
+Organic compounds/Organoheterocyclic compounds/Diazines/Pyrazines
+Beispiel: None
+
+Pyrimidines and pyrimidine derivatives:
+Organic compounds/Organoheterocyclic compounds/Diazines/Pyrimidines and pyrimidine derivatives
+Beispiel: None
+
+Dihydrofurans:
+Organic compounds/Organoheterocyclic compounds/Dihydrofurans
+Beispiel: None
+
+Furanones:
+Organic compounds/Organoheterocyclic compounds/Dihydrofurans/Furanones
+Beispiel: None
+
+Dithiolanes:
+Organic compounds/Organoheterocyclic compounds/Dithiolanes
+Beispiel: None
+
+Lipoamides:
+Organic compounds/Organoheterocyclic compounds/Dithiolanes/Lipoamides
+Beispiel: None
+
+Furofurans:
+Organic compounds/Organoheterocyclic compounds/Furofurans
+Beispiel: None
+
+Isosorbides:
+Organic compounds/Organoheterocyclic compounds/Furofurans/Isosorbides
+Beispiel: None
+
+Imidazopyrimidines:
+Organic compounds/Organoheterocyclic compounds/Imidazopyrimidines
+Beispiel: None
+
+Purines and purine derivatives:
+Organic compounds/Organoheterocyclic compounds/Imidazopyrimidines/Purines and purine derivatives
+Beispiel: None
+
+Indoles and derivatives:
+Organic compounds/Organoheterocyclic compounds/Indoles and derivatives
+Beispiel: None
+
+Hydroxyindoles:
+Organic compounds/Organoheterocyclic compounds/Indoles and derivatives/Hydroxyindoles
+Beispiel: None
+
+Indoles:
+Organic compounds/Organoheterocyclic compounds/Indoles and derivatives/Indoles
+Beispiel: None
+
+Indolines:
+Organic compounds/Organoheterocyclic compounds/Indoles and derivatives/Indolines
+Beispiel: None
+
+Indolyl carboxylic acids and derivatives:
+Organic compounds/Organoheterocyclic compounds/Indoles and derivatives/Indolyl carboxylic acids and derivatives
+Beispiel: None
+
+Tryptamines and derivatives:
+Organic compounds/Organoheterocyclic compounds/Indoles and derivatives/Tryptamines and derivatives
+Beispiel: None
+
+Lactones:
+Organic compounds/Organoheterocyclic compounds/Lactones
+Beispiel: None
+
+Delta valerolactones:
+Organic compounds/Organoheterocyclic compounds/Lactones/Delta valerolactones
+Beispiel: None
+
+Gamma butyrolactones:
+Organic compounds/Organoheterocyclic compounds/Lactones/Gamma butyrolactones
+Beispiel: None
+
+Pteridines and derivatives:
+Organic compounds/Organoheterocyclic compounds/Pteridines and derivatives
+Beispiel: None
+
+Alloxazines and isoalloxazines:
+Organic compounds/Organoheterocyclic compounds/Pteridines and derivatives/Alloxazines and isoalloxazines
+Beispiel: None
+
+Pterins and derivatives:
+Organic compounds/Organoheterocyclic compounds/Pteridines and derivatives/Pterins and derivatives
+Beispiel: None
+
+Pyridines and derivatives:
+Organic compounds/Organoheterocyclic compounds/Pyridines and derivatives
+Beispiel: None
+
+Hydropyridines:
+Organic compounds/Organoheterocyclic compounds/Pyridines and derivatives/Hydropyridines
+Beispiel: None
+
+Pyridine carboxaldehydes:
+Organic compounds/Organoheterocyclic compounds/Pyridines and derivatives/Pyridine carboxaldehydes
+Beispiel: None
+
+Pyridinecarboxylic acids and derivatives:
+Organic compounds/Organoheterocyclic compounds/Pyridines and derivatives/Pyridinecarboxylic acids and derivatives
+Beispiel: None
+
+Pyridoxamines:
+Organic compounds/Organoheterocyclic compounds/Pyridines and derivatives/Pyridoxamines
+Beispiel: None
+
+Pyridoxines:
+Organic compounds/Organoheterocyclic compounds/Pyridines and derivatives/Pyridoxines
+Beispiel: None
+
+Pyrrolidinylpyridines:
+Organic compounds/Organoheterocyclic compounds/Pyridines and derivatives/Pyrrolidinylpyridines
+Beispiel: None
+
+Pyrroles:
+Organic compounds/Organoheterocyclic compounds/Pyrroles
+Beispiel: None
+
+Pyrrole carboxylic acids and derivatives:
+Organic compounds/Organoheterocyclic compounds/Pyrroles/Pyrrole carboxylic acids and derivatives
+Beispiel: None
+
+Pyrrolidines:
+Organic compounds/Organoheterocyclic compounds/Pyrrolidines
+Beispiel: None
+
+Pyrrolidones:
+Organic compounds/Organoheterocyclic compounds/Pyrrolidines/Pyrrolidones
+Beispiel: None
+
+Quinolines and derivatives:
+Organic compounds/Organoheterocyclic compounds/Quinolines and derivatives
+Beispiel: None
+
+Quinoline carboxylic acids:
+Organic compounds/Organoheterocyclic compounds/Quinolines and derivatives/Quinoline carboxylic acids
+Beispiel: None
+
+Tetrahydroisoquinolines:
+Organic compounds/Organoheterocyclic compounds/Tetrahydroisoquinolines
+Beispiel: None
+
+Tetrapyrroles and derivatives:
+Organic compounds/Organoheterocyclic compounds/Tetrapyrroles and derivatives
+Beispiel: None
+
+Bilirubins:
+Organic compounds/Organoheterocyclic compounds/Tetrapyrroles and derivatives/Bilirubins
+Beispiel: None
+
+Corrinoids:
+Organic compounds/Organoheterocyclic compounds/Tetrapyrroles and derivatives/Corrinoids
+Beispiel: None
+
+Metallotetrapyrroles:
+Organic compounds/Organoheterocyclic compounds/Tetrapyrroles and derivatives/Metallotetrapyrroles
+Beispiel: None
+
+Porphyrins:
+Organic compounds/Organoheterocyclic compounds/Tetrapyrroles and derivatives/Porphyrins
+Beispiel: None
+
+Organometalloid compounds:
+Organic compounds/Organometallic compounds/Organometalloid compounds
+Beispiel: None
+
+Organoselenium compounds:
+Organic compounds/Organometallic compounds/Organometalloid compounds/Organoselenium compounds
+Beispiel: None
+
+Thioethers:
+Organic compounds/Organosulfur compounds/Thioethers
+Beispiel: None
+
+Dialkylthioethers:
+Organic compounds/Organosulfur compounds/Thioethers/Dialkylthioethers
+Beispiel: None
+
+Thiols:
+Organic compounds/Organosulfur compounds/Thiols
+Beispiel: None
+
+Alkylthiols:
+Organic compounds/Organosulfur compounds/Thiols/Alkylthiols
+Beispiel: None
+
+Thioureas:
+Organic compounds/Organosulfur compounds/Thioureas
+Beispiel: None
+
+Phenylpropanoids and polyketides:
+Organic compounds/Phenylpropanoids and polyketides
+Beispiel: None
+
+Cinnamaldehydes:
+Organic compounds/Phenylpropanoids and polyketides/Cinnamaldehydes
+Beispiel: None
+
+Cinnamic acids and derivatives:
+Organic compounds/Phenylpropanoids and polyketides/Cinnamic acids and derivatives
+Beispiel: None
+
+Cinnamic acids:
+Organic compounds/Phenylpropanoids and polyketides/Cinnamic acids and derivatives/Cinnamic acids
+Beispiel: None
+
+Hydroxycinnamic acids and derivatives:
+Organic compounds/Phenylpropanoids and polyketides/Cinnamic acids and derivatives/Hydroxycinnamic acids and derivatives
+Beispiel: None
+
+Flavonoids:
+Organic compounds/Phenylpropanoids and polyketides/Flavonoids
+Beispiel: REFJWTPEDVJJIY-UHFFFAOYSA-N
+
+Phenylpropanoic acids:
+Organic compounds/Phenylpropanoids and polyketides/Phenylpropanoic acids
+Beispiel: None
+
+Stilbenes:
+Organic compounds/Phenylpropanoids and polyketides/Stilbenes
+Beispiel: OQCYTSHIQNPJIC-UHFFFAOYSA-N

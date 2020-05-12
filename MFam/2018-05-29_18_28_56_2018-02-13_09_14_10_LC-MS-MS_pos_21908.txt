@@ -1,0 +1,14 @@
+library = 2018-02-13_09:14:10_LC-MS-MS_pos_21908.msp
+maximumNumberOfScores = 10000
+removeRareFragments = FALSE
+mergeDuplicatedSpectra = TRUE
+takeSpectraWithMaximumNumberOfPeaks = FALSE
+classOfClass = ChemOnt|AllClasses
+minimumNumberOfPosSpectraPerClass = 10
+minimumNumberOfNegSpectraPerClass = 10
+numberOfDataSetDecompositions = 10
+proportionTraining = 0.7
+unitResolution = FALSE
+methodName = ColSumsPos
+paramsString = smoothIntensities=FALSE
+algoName = method=ColSumsPos; smoothIntensities=FALSE
