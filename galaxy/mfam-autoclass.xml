@@ -12,11 +12,9 @@
 echo "working-dir: /tmp";
 echo "mfam-dir: /usr/local/share/MFam";
 echo "metfamily-dir: /usr/local/share/MetFamily";
-echo "working-dir: /tmp";
-echo "working-dir: /tmp";
-echo "working-dir: /tmp";
 echo "polarity: $polarity";
 echo "input-msp: $input-msp";
+echo "sample-name: $input-msp.name";
 echo "input-classes: $input-classes";
 echo "minimumIntensityOfMaximalMS2peak: $minimumIntensityOfMaximalMS2peak";
 echo "minimumProportionOfMS2peaks: $minimumProportionOfMS2peaks";
@@ -39,7 +37,7 @@ echo "output-summary: $output-summary";
 echo "output-validation: $output-validation";
 echo "output-rdata: $output-rdata";
 
-mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $polarity $input-msp $input-classes $minimumIntensityOfMaximalMS2peak $minimumProportionOfMS2peaks $mzDeviationAbsolute-grouping $mzDeviationInPPM-grouping $doPrecursorDeisotoping $mzDeviationAbsolute-precursorDeisotoping $mzDeviationInPPM-precursorDeisotoping $maximumRtDifference $doMs2PeakGroupDeisotoping $mzDeviationAbsolute-ms2PeakGroupDeisotoping $mzDeviationInPPM-ms2PeakGroupDeisotoping $proportionOfMatchingPeaks-ms2PeakGroupDeisotoping $mzDeviationAbsolute-mapping $minimumNumberOfMS2PeaksPerGroup $neutralLossesPrecursorToFragments $neutralLossesFragmentsToFragments $output-plot-class-abundance $output-summary $output-validation $output-rdata;
+mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $polarity $input-msp $input-msp.name $input-classes $minimumIntensityOfMaximalMS2peak $minimumProportionOfMS2peaks $mzDeviationAbsolute-grouping $mzDeviationInPPM-grouping $doPrecursorDeisotoping $mzDeviationAbsolute-precursorDeisotoping $mzDeviationInPPM-precursorDeisotoping $maximumRtDifference $doMs2PeakGroupDeisotoping $mzDeviationAbsolute-ms2PeakGroupDeisotoping $mzDeviationInPPM-ms2PeakGroupDeisotoping $proportionOfMatchingPeaks-ms2PeakGroupDeisotoping $mzDeviationAbsolute-mapping $minimumNumberOfMS2PeaksPerGroup $neutralLossesPrecursorToFragments $neutralLossesFragmentsToFragments $output-plot-class-abundance $output-summary $output-validation $output-classes-richness $output-rdata;
   ]]>
   </command>
   <inputs>
@@ -54,7 +52,7 @@ mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $polarity
     <param name="minimumIntensityOfMaximalMS2peak" type="text" value="10" optional="False" label="Minimum intensity of maximal MS2 peak" help="The minimum intensity a MS2 peak must have with regard to the maximal MS2 peak" />
     <param name="minimumProportionOfMS2peaks" type="text" value="0.005" optional="False" label="Minimum proportion of MS2 peaks" help="Minimum proportion of MS2 peaks" />
     <param name="mzDeviationAbsolute-grouping" type="text" value="0.1" optional="False" label="mz deviation for absolute grouping" help="mz deviation for absolute grouping" />
-    <param name="mzDeviationInPPM_grouping" type="text" value="500" optional="False" label="mz deviation in ppm for grouping" help="mz deviation in ppm for grouping" />
+    <param name="mzDeviationInPPM_grouping" type="text" value="10" optional="False" label="mz deviation in ppm for grouping" help="mz deviation in ppm for grouping" />
     
     <param name="maximumRtDifference" type="text" value="0.02" optional="False" label="maximum rt difference" help="maximum retention time difference" />
     
@@ -91,6 +89,7 @@ mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $polarity
     <data name="output-plot-class-abundance" type="data" format="pdf" label="${input-msp.display_name}_mfam_autoclass_abundance_plot.pdf" />
     <data name="output-summary" type="data" format="txt" label="${input-msp.display_name}_mfam_autoclass_summary.txt" />
     <data name="output-validation" type="data" format="tsv" label="${input-msp.display_name}_mfam_autoclass_validation.tsv" />
+    <data name="output-classes-richness" type="data" format="tsv" label="${input-msp.display_name}_mfam_autoclass_richness.tsv" />
     <data name="output_rdata" type="data" format="txt" label="${input-msp.display_name}_mfam_autoclass.rdata" />
   </outputs>
   <help>
@@ -141,7 +140,8 @@ Output files
 | 1) Plot containing the abundance of compound classes     |  PDF   |
 | 2) MFam autoclassification summary                       |  TXT   |
 | 3) MFam classifier validation table                      |  TSV   |
-| 4) MFam classifier R-Data                                | RData  |
+| 4) MFam classes richness table                           |  TSV   |
+| 5) MFam classifier R-Data                                | RData  |
 +----------------------------------------------------------+--------+
 
 ---------------------------------------------------

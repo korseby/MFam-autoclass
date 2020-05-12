@@ -261,7 +261,7 @@ doAnnotation <- function(filePath, propertiesList, featureMatrix, parameterSet, 
   
   classToSpectra_class <- lapply(X = results__class_spectrum, FUN = function(x){
     if(is.null(x)){      return(NULL)
-    } else {             return(sort(x))
+    } else {             return(sort(unlist(x)))
     }
   })
   names(classToSpectra_class) <- classes
