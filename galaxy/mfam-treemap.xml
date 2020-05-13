@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tool id="mfam-treemap" name="mfam-treemap" version="1.0">
+  <requirements>
+    <container type="docker">korseby/mfam-autoclass</container>
+  </requirements>
+  <description>Treemap plot of MFam Classifier</description>
+  <stdio>
+    <regex match="" source="stderr" level="warning" description="R messages" />
+    <exit_code range="1:" level="fatal" description="Tool error" />
+  </stdio>
+  <command><![CDATA[
+echo "workingdir: /tmp";
+echo "mfamdir: /usr/local/share/MFam";
+echo "metfamilydir: /usr/local/share/MetFamily";
+echo "inputrdata: $inputrdata";
+echo "method: $method";
+echo "treemappdf: $treemappdf";
+
+mfam-treemap.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $inputrdata $method $treemappdf;
+  ]]>
+  </command>
+  <inputs>
+    <param name="inputrdata" type="data" format="rdata" optional="False" label="MFam Object RData" help="An RData object of a [merged] MFam Classification" />
+    
+    <param name="method" type="select" value="sum" optional="False" label="Method" help="The method used when several MFam Classification objects have been merged">
+      <option value="sum" selected="True">sum</option>
+      <option value="mean">mean</option>
+      <option value="median">median</option>
+    </param>
+  </inputs>
+  
+  <outputs>
+    <data name="treemappdf" type="data" format="pdf" label="mfam_autoclass_treemap_plot.pdf" />
+  </outputs>
+  <help>
+.. class:: infomark
+
+**Authors**
+
+| **Kristian Peters (kpeters@ipb-halle.de)** wrote and maintains this module.
+
+---------------------------------------------------
+
+=====================================
+MFam Autoclassification Treemap plot
+=====================================
+
+-----------
+Description
+-----------
+
+        | Treemap plot of MFAM Autoclassification
+        | 
+
+-----------
+Input files
+-----------
+
++---------------------------------------------+------------+
+| File                                        |   Format   |
++=============================================+============+
+| 1)  RData file                              | 1) RData   |
++---------------------------------------------+------------+
+
+------------
+Output files
+------------
+
++----------------------------------------------------------+----------+
+| Files                                                    | Format   |
++==========================================================+==========+
+| 1) Treemap plot                                          | 1) PDF   |
++----------------------------------------------------------+----------+
+
+---------------------------------------------------
+
+-------
+Changes
+-------
+
+Version: 1.0
+        | Initial release
+        | 
+
+  </help>
+</tool>
