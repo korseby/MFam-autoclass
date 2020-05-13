@@ -14,7 +14,7 @@ echo "mfamdir: /usr/local/share/MFam";
 echo "metfamilydir: /usr/local/share/MetFamily";
 echo "polarity: $polarity";
 echo "inputmsp: $inputmsp";
-export inputmspname=$inputmsp.name;
+export inputmspname=${inputmsp.dsplay_name};
 export samplename=`basename \$inputmspname .msp`;
 echo "samplename: \$samplename";
 echo "inputclasses: $inputclasses";
@@ -112,7 +112,8 @@ MFam Autoclassification
 Description
 -----------
 
-| Apply the MFam Classifier to on all the spectra found in a MSP file. The MFam Classifier is applied per sample and then joined afterwards.
+        | Apply the MFam Classifier to on all the spectra found in a MSP file. The MFam Classifier is applied per sample and then joined afterwards.
+        | 
 
 -----------
 Input files
@@ -121,8 +122,8 @@ Input files
 +---------------------------------------------+------------+
 | File                                        |   Format   |
 +=============================================+============+
-| 1)  MSP file                                |   MSP      |
-| 2)  Compound classes reference text file    |   TXT      |
+| 1)  MSP file                                | 1) MSP     |
+| 2)  Compound classes reference text file    | 2) TXT     |
 +---------------------------------------------+------------+
 
 ----------
@@ -137,15 +138,15 @@ Polarity
 Output files
 ------------
 
-+----------------------------------------------------------+--------+
-| Files                                                    | Format |
-+==========================================================+========+
-| 1) Plot containing the abundance of compound classes     |  PDF   |
-| 2) MFam autoclassification summary                       |  TXT   |
-| 3) MFam classifier validation table                      |  TSV   |
-| 4) MFam classes richness table                           |  TSV   |
-| 5) MFam classifier R-Data                                | RData  |
-+----------------------------------------------------------+--------+
++----------------------------------------------------------+----------+
+| Files                                                    | Format   |
++==========================================================+==========+
+| 1) Plot containing the abundance of compound classes     | 1) PDF   |
+| 2) MFam autoclassification summary                       | 2) TXT   |
+| 3) MFam classifier validation table                      | 3) TSV   |
+| 4) MFam classes richness table                           | 4) TSV   |
+| 5) MFam classifier R-Data                                | 5) RData |
++----------------------------------------------------------+----------+
 
 ---------------------------------------------------
 
@@ -154,7 +155,8 @@ Changes
 -------
 
 Version: 1.0
-| Initial release
+        | Initial release
+        | 
 
   </help>
 </tool>
