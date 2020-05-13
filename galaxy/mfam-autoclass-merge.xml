@@ -19,7 +19,7 @@ export inputrdataobjectnames='
 ${inputrdataobjectname.name},
 #end for
 ';
-for inputrdataobjectname in `echo $inputrdataobjectnames`; do echo \$inputrdataobjectname >> /tmp/inputrdataobjectnames.txt; done;
+for inputrdataobjectname in `echo $inputrdataobjects| perl -pe 's/\,/\n/g'`; do echo \$inputrdataobjectname >> /tmp/inputrdataobjectnames.txt; done;
 
 cat /tmp/inputrdataobjectnames.txt;
 
@@ -29,7 +29,7 @@ echo "outputclassesrichness: $outputclassesrichness";
 echo "outputvalidation: $outputvalidation";
 echo "outputrdata: $outputrdata";
 
-mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily /tmp/inputrdataobjectnames.txt $outputplotclassabundance $outputsummary $outputclassesrichness $outputvalidation $outputrdata;
+mfam-autoclass-merge.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily /tmp/inputrdataobjectnames.txt $outputplotclassabundance $outputsummary $outputclassesrichness $outputvalidation $outputrdata;
   ]]>
   </command>
   <inputs>
@@ -37,11 +37,11 @@ mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily /tmp/inpu
   </inputs>
   
   <outputs>
-    <data name="outputplotclassabundance" type="data" format="pdf" label="${inputrdataobjects.display_name}_mfam_autoclass_merged_abundance_plot.pdf" />
-    <data name="outputsummary" type="data" format="txt" label="${inputrdataobjects.display_name}_mfam_autoclass_merged_summary.txt" />
-    <data name="outputvalidation" type="data" format="tsv" label="${inputrdataobjects.display_name}_mfam_autoclass_merged_validation.tsv" />
-    <data name="outputclassesrichness" type="data" format="tsv" label="${inputrdataobjects.display_name}_mfam_autoclass_merged_richness.tsv" />
-    <data name="outputrdata" type="data" format="rdata" label="${inputrdataobjects.display_name}_mfam_autoclass_merged.rdata" />
+    <data name="outputplotclassabundance" type="data" format="pdf" label="mfam_autoclass_merged_abundance_plot.pdf" />
+    <data name="outputsummary" type="data" format="txt" label="mfam_autoclass_merged_summary.txt" />
+    <data name="outputvalidation" type="data" format="tsv" label="mfam_autoclass_merged_validation.tsv" />
+    <data name="outputclassesrichness" type="data" format="tsv" label="mfam_autoclass_merged_richness.tsv" />
+    <data name="outputrdata" type="data" format="rdata" label="mfam_autoclass_merged.rdata" />
   </outputs>
   <help>
 .. class:: infomark
