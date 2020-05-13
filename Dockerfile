@@ -18,7 +18,7 @@ RUN dpkg-reconfigure locales
 RUN apt-get -y update && apt-get -y dist-upgrade && apt-get -y --allow-unauthenticated install apt-transport-https make gcc gfortran g++ libblas-dev liblapack-dev libxml++2.6-dev libexpat1-dev libxml2-dev libnetcdf-dev libssl-dev pkg-config wget curl git unzip zip python3 python3-pip r-base r-base-dev
 
 # Install R packages
-RUN R -e 'install.packages(c("irlba","igraph","ggplot2","digest","lattice","XML","Rcpp","reshape2","plyr","stringi","stringr","intervals","devtools","RColorBrewer","plyr","RANN","knitr","ncdf4","microbenchmark","RUnit","foreach","doMC","curl","jsonlite","treemap","colourpicker","htmltools","shiny","shinyBS","shinyjs","DT","FactoMineR","slam","cba","squash","plotrix","plotly","circlize","matrixStats","Matrix","tools"), repos="https://cloud.r-project.org/")'
+RUN R -e 'install.packages(c("irlba","igraph","ggplot2","digest","lattice","XML","Rcpp","reshape2","plyr","stringi","stringr","intervals","devtools","RColorBrewer","plyr","RANN","knitr","ncdf4","microbenchmark","RUnit","foreach","doMC","curl","jsonlite","treemap","colourpicker","htmltools","shiny","shinyBS","shinyjs","DT","FactoMineR","slam","cba","squash","plotrix","plotly","circlize","matrixStats","Matrix","tools","ape","data.tree","plyr"), repos="https://cloud.r-project.org/")'
 
 # Install Bioconductor
 RUN R -e 'if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager"); BiocManager::install(c("multtest","MSnbase","mzR","MassSpecWavelet","S4Vectors","BiocStyle","faahKO","msdata","xcms","CAMERA","mixOmics","pcaMethods"), ask=FALSE)'
