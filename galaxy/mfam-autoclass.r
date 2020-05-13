@@ -384,7 +384,7 @@ write.table(x=classifiers_validation, file=output_validation, sep="\t", quote=TR
 
 # ---------- Export classes richness per sample ----------
 # Count numbers of matched classes in each sample
-sample_name <- gsub(x=basename(input_msp), pattern='\\..*$', replacement='')
+sample_name <- gsub(x=basename(sample_name), pattern='\\..*$', replacement='')
 class_list <- NULL
 for (i in classes) {
 	vec <- as.numeric(sum(grepl(pattern=i, x=classifiers[,"Annotation (putative)"]), na.rm=TRUE))

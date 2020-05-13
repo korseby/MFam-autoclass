@@ -14,7 +14,7 @@ echo "mfamdir: /usr/local/share/MFam";
 echo "metfamilydir: /usr/local/share/MetFamily";
 echo "polarity: $polarity";
 echo "inputmsp: $inputmsp";
-export inputmspname=${inputmsp.dsplay_name};
+export inputmspname=${inputmsp.display_name};
 export samplename=`basename \$inputmspname .msp`;
 echo "samplename: \$samplename";
 echo "inputclasses: $inputclasses";
