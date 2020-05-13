@@ -9,35 +9,38 @@
     <exit_code range="1:" level="fatal" description="Tool error" />
   </stdio>
   <command><![CDATA[
-echo "working-dir: /tmp";
-echo "mfam-dir: /usr/local/share/MFam";
-echo "metfamily-dir: /usr/local/share/MetFamily";
+echo "workingdir: /tmp";
+echo "mfamdir: /usr/local/share/MFam";
+echo "metfamilydir: /usr/local/share/MetFamily";
 echo "polarity: $polarity";
-echo "input-msp: $input-msp";
-echo "sample-name: $input-msp.name";
-echo "input-classes: $input-classes";
+echo "inputmsp: $inputmsp";
+export inputmspname=$inputmsp.name;
+export samplename=`basename \$inputmspname .msp`;
+echo "samplename: \$samplename";
+echo "inputclasses: $inputclasses";
 echo "minimumIntensityOfMaximalMS2peak: $minimumIntensityOfMaximalMS2peak";
 echo "minimumProportionOfMS2peaks: $minimumProportionOfMS2peaks";
-echo "mzDeviationAbsolute: $mzDeviationAbsolute-grouping";
-echo "mzDeviationInPPM-grouping: $mzDeviationInPPM-grouping";
+echo "mzDeviationAbsolutegrouping: $mzDeviationAbsolutegrouping";
+echo "mzDeviationInPPMgrouping: $mzDeviationInPPMgrouping";
 echo "doPrecursorDeisotoping: $doPrecursorDeisotoping";
-echo "mzDeviationAbsolute-precursorDeisotoping: $mzDeviationAbsolute-precursorDeisotoping";
-echo "mzDeviationInPPM-precursorDeisotoping: $mzDeviationInPPM-precursorDeisotoping";
+echo "mzDeviationAbsoluteprecursorDeisotoping: $mzDeviationAbsoluteprecursorDeisotoping";
+echo "mzDeviationInPPMprecursorDeisotoping: $mzDeviationInPPMprecursorDeisotoping";
 echo "maximumRtDifference: $maximumRtDifference";
 echo "doMs2PeakGroupDeisotoping: $doMs2PeakGroupDeisotoping";
-echo "mzDeviationAbsolute-ms2PeakGroupDeisotoping: $mzDeviationAbsolute-ms2PeakGroupDeisotoping";
-echo "mzDeviationInPPM-ms2PeakGroupDeisotoping: $mzDeviationInPPM-ms2PeakGroupDeisotoping";
-echo "proportionOfMatchingPeaks-ms2PeakGroupDeisotoping: $proportionOfMatchingPeaks-ms2PeakGroupDeisotoping";
-echo "mzDeviationAbsolute-mapping: $mzDeviationAbsolute-mapping";
+echo "mzDeviationAbsolutems2PeakGroupDeisotoping: $mzDeviationAbsolutems2PeakGroupDeisotoping";
+echo "mzDeviationInPPMms2PeakGroupDeisotoping: $mzDeviationInPPMms2PeakGroupDeisotoping";
+echo "proportionOfMatchingPeaksms2PeakGroupDeisotoping: $proportionOfMatchingPeaksms2PeakGroupDeisotoping";
+echo "mzDeviationAbsolutemapping: $mzDeviationAbsolutemapping";
 echo "minimumNumberOfMS2PeaksPerGroup: $minimumNumberOfMS2PeaksPerGroup";
 echo "neutralLossesPrecursorToFragments: $neutralLossesPrecursorToFragments";
 echo "neutralLossesFragmentsToFragments: $neutralLossesFragmentsToFragments";
-echo "output-plot-class-abundance: $output-plot-class-abundance";
-echo "output-summary: $output-summary";
-echo "output-validation: $output-validation";
-echo "output-rdata: $output-rdata";
+echo "outputplotclassabundance: $outputplotclassabundance";
+echo "outputsummary: $outputsummary";
+echo "outputvalidation: $outputvalidation";
+echo "outputclassesrichness: $outputclassesrichness";
+echo "outputrdata: $outputrdata";
 
-mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $polarity $input-msp $input-msp.name $input-classes $minimumIntensityOfMaximalMS2peak $minimumProportionOfMS2peaks $mzDeviationAbsolute-grouping $mzDeviationInPPM-grouping $doPrecursorDeisotoping $mzDeviationAbsolute-precursorDeisotoping $mzDeviationInPPM-precursorDeisotoping $maximumRtDifference $doMs2PeakGroupDeisotoping $mzDeviationAbsolute-ms2PeakGroupDeisotoping $mzDeviationInPPM-ms2PeakGroupDeisotoping $proportionOfMatchingPeaks-ms2PeakGroupDeisotoping $mzDeviationAbsolute-mapping $minimumNumberOfMS2PeaksPerGroup $neutralLossesPrecursorToFragments $neutralLossesFragmentsToFragments $output-plot-class-abundance $output-summary $output-validation $output-classes-richness $output-rdata;
+mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $polarity $inputmsp \$samplename $inputclasses $minimumIntensityOfMaximalMS2peak $minimumProportionOfMS2peaks $mzDeviationAbsolutegrouping $mzDeviationInPPMgrouping $doPrecursorDeisotoping $mzDeviationAbsoluteprecursorDeisotoping $mzDeviationInPPMprecursorDeisotoping $maximumRtDifference $doMs2PeakGroupDeisotoping $mzDeviationAbsolutems2PeakGroupDeisotoping $mzDeviationInPPMms2PeakGroupDeisotoping $proportionOfMatchingPeaksms2PeakGroupDeisotoping $mzDeviationAbsolutemapping $minimumNumberOfMS2PeaksPerGroup $neutralLossesPrecursorToFragments $neutralLossesFragmentsToFragments $outputplotclassabundance $outputsummary $outputvalidation $outputclassesrichness $outputrdata;
   ]]>
   </command>
   <inputs>
@@ -46,33 +49,33 @@ mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $polarity
       <option value="negative">negative</option>
     </param>
     
-    <param name="input-msp" type="data" format="txt" optional="False" label="MSP file" help="The MSP file that contains the MS2 spectra to be classified" />
-    <param name="input-classes" type="data" format="txt" optional="False" label="Compound classes reference file" help="File containing the reference set of compound classes to which spectra are investigated to" />
+    <param name="inputmsp" type="data" format="txt" optional="False" label="MSP file" help="The MSP file that contains the MS2 spectra to be classified" />
+    <param name="inputclasses" type="data" format="txt" optional="False" label="Compound classes reference file" help="File containing the reference set of compound classes to which spectra are investigated to" />
     
     <param name="minimumIntensityOfMaximalMS2peak" type="text" value="10" optional="False" label="Minimum intensity of maximal MS2 peak" help="The minimum intensity a MS2 peak must have with regard to the maximal MS2 peak" />
     <param name="minimumProportionOfMS2peaks" type="text" value="0.005" optional="False" label="Minimum proportion of MS2 peaks" help="Minimum proportion of MS2 peaks" />
-    <param name="mzDeviationAbsolute-grouping" type="text" value="0.1" optional="False" label="mz deviation for absolute grouping" help="mz deviation for absolute grouping" />
-    <param name="mzDeviationInPPM-grouping" type="text" value="10" optional="False" label="mz deviation in ppm for grouping" help="mz deviation in ppm for grouping" />
+    <param name="mzDeviationAbsolutegrouping" type="text" value="0.1" optional="False" label="mz deviation for absolute grouping" help="mz deviation for absolute grouping" />
+    <param name="mzDeviationInPPMgrouping" type="text" value="10" optional="False" label="mz deviation in ppm for grouping" help="mz deviation in ppm for grouping" />
     
     <param name="maximumRtDifference" type="text" value="0.02" optional="False" label="maximum rt difference" help="maximum retention time difference" />
     
-    <param name="mzDeviationAbsolute-mapping" type="text" value="0.01" optional="False" label="mz deviation for absolute mapping" help="mz deviation for absolute mapping" />
+    <param name="mzDeviationAbsolutemapping" type="text" value="0.01" optional="False" label="mz deviation for absolute mapping" help="mz deviation for absolute mapping" />
     <param name="minimumNumberOfMS2PeaksPerGroup" type="text" value="1" optional="False" label="Minimum number of MS2 peaks per group" help="Minimum number of MS2 peaks per group" />
     
     <param name="doPrecursorDeisotoping" type="select" value="True" optional="False" label="Do precursor deisotoping?" help="Enable precursor deisotoping">
       <option value="True" selected="True">True</option>
       <option value="False">False</option>
     </param>
-    <param name="mzDeviationAbsolute-precursorDeisotoping" type="text" value="0.001" optional="False" label="mz deviation for absolute precursor deisotoping" help="mz deviation for absolute precursor deisotoping" />
-    <param name="mzDeviationInPPM-precursorDeisotoping" type="text" value="10" optional="False" label="mz deviation in ppm for precursor deisotoping" help="mz deviation in ppm for precursor deisotoping" />
+    <param name="mzDeviationAbsoluteprecursorDeisotoping" type="text" value="0.001" optional="False" label="mz deviation for absolute precursor deisotoping" help="mz deviation for absolute precursor deisotoping" />
+    <param name="mzDeviationInPPMprecursorDeisotoping" type="text" value="10" optional="False" label="mz deviation in ppm for precursor deisotoping" help="mz deviation in ppm for precursor deisotoping" />
         
     <param name="doMs2PeakGroupDeisotoping" type="select" value="True" optional="False" label="Do MS2 peak group deisotoping?" help="Enable MS2 peak group deisotoping">
       <option value="True" selected="True">True</option>
       <option value="False">False</option>
     </param>
-    <param name="mzDeviationAbsolute-ms2PeakGroupDeisotoping" type="text" value="0.01" optional="False" label="mz deviation for absolute MS2 peak group deisotoping" help="mz deviation for absolute MS2 peak group deisotoping" />
-    <param name="mzDeviationInPPM-ms2PeakGroupDeisotoping" type="text" value="10" optional="False" label="mz deviation in ppm for MS2 peak group deisotoping" help="mz deviation in ppm for MS2 peak group deisotoping" />
-    <param name="proportionOfMatchingPeaks-ms2PeakGroupDeisotoping" type="text" value="0.9" optional="False" label="Proportion of matching peaks for MS2 peak group deisotoping" help="Proportion of matching peaks for MS2 peak group deisotoping" />
+    <param name="mzDeviationAbsolutems2PeakGroupDeisotoping" type="text" value="0.01" optional="False" label="mz deviation for absolute MS2 peak group deisotoping" help="mz deviation for absolute MS2 peak group deisotoping" />
+    <param name="mzDeviationInPPMms2PeakGroupDeisotoping" type="text" value="10" optional="False" label="mz deviation in ppm for MS2 peak group deisotoping" help="mz deviation in ppm for MS2 peak group deisotoping" />
+    <param name="proportionOfMatchingPeaksms2PeakGroupDeisotoping" type="text" value="0.9" optional="False" label="Proportion of matching peaks for MS2 peak group deisotoping" help="Proportion of matching peaks for MS2 peak group deisotoping" />
         
     <param name="neutralLossesPrecursorToFragments" type="select" value="True" optional="False" label="Map neutral losses of precursor to fragments?" help="Enable mapping of neutral losses precursor to fragments">
       <option value="True" selected="True">True</option>
@@ -86,11 +89,11 @@ mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $polarity
   </inputs>
   
   <outputs>
-    <data name="output-plot-class-abundance" type="data" format="pdf" label="${input-msp.display_name}_mfam_autoclass_abundance_plot.pdf" />
-    <data name="output-summary" type="data" format="txt" label="${input-msp.display_name}_mfam_autoclass_summary.txt" />
-    <data name="output-validation" type="data" format="tsv" label="${input-msp.display_name}_mfam_autoclass_validation.tsv" />
-    <data name="output-classes-richness" type="data" format="tsv" label="${input-msp.display_name}_mfam_autoclass_richness.tsv" />
-    <data name="output-rdata" type="data" format="txt" label="${input-msp.display_name}_mfam_autoclass.rdata" />
+    <data name="outputplotclassabundance" type="data" format="pdf" label="${inputmsp.display_name}_mfam_autoclass_abundance_plot.pdf" />
+    <data name="outputsummary" type="data" format="txt" label="${inputmsp.display_name}_mfam_autoclass_summary.txt" />
+    <data name="outputvalidation" type="data" format="tsv" label="${inputmsp.display_name}_mfam_autoclass_validation.tsv" />
+    <data name="outputclassesrichness" type="data" format="tsv" label="${inputmsp.display_name}_mfam_autoclass_richness.tsv" />
+    <data name="outputrdata" type="data" format="txt" label="${inputmsp.display_name}_mfam_autoclass.rdata" />
   </outputs>
   <help>
 .. class:: infomark
