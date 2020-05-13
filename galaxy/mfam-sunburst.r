@@ -1,106 +1,11 @@
 # ############################## Classification with MetFamily ##############################
-#install.packages(c('colourpicker','shinyBS','FactoMineR','slam','cba','squash','plotrix','plotly','circlize'))
-source("classifier/ms2_classification.r")
-classifiers <- list()
 
-#classifier_name <- "classifier/2019-06-16_MSMS_HR_pos_free__c_13314__s_71354__mFam_MoNA_GNPS_WeizMASS_PlaSMA_Classifier"
-classifier_name <- "classifier/2018-05-29_18_28_56_2018-02-13_09_14_10_LC-MS-MS_pos_21908"
-classifiers[["pos"]] <- applyClassifierMs2(classifierFile = paste0(classifier_name, ".RData"),
-										   propertiesFile = paste0(classifier_name, ".txt"),
-										   fileMs1Path = NULL,
-										   fileMs2Path = "__ms2_library_spectra_matching_pos.msp",
-										   fileClasses = "classifier/classes.txt",
-										   minimumIntensityOfMaximalMS2peak = 10, #100
-										   minimumProportionOfMS2peaks = 0.005, #0.05
-										   mzDeviationAbsolute_grouping = 0.1, #0.01
-										   mzDeviationInPPM_grouping = 500 ) #10
-classifier_name <- "classifier/2018-05-29_18_21_05_2018-02-13_09_14_10_LC-MS-MS_neg_11328"
-classifiers[["neg"]] <- applyClassifierMs2(classifierFile = paste0(classifier_name, ".RData"),
-										   propertiesFile = paste0(classifier_name, ".txt"),
-										   fileMs1Path = NULL,
-										   fileMs2Path = "__ms2_library_spectra_matching_neg.msp",
-										   #fileMs2Path = paste0("__neg.msp"),
-										   fileClasses = "classifier/classes.txt",
-										   minimumIntensityOfMaximalMS2peak = 10, #100
-										   minimumProportionOfMS2peaks = 0.005, #0.05
-										   mzDeviationAbsolute_grouping = 0.1, #0.01
-										   mzDeviationInPPM_grouping = 500 ) #10
 
-# Diversity of compound classes
-div_classes <- data.frame()
-for (i in c("pos","neg")) {
-	obj <- data.frame(mode=i, classes=unique(classifiers[[i]][,"Annotation (putative)"]), frequency=0)
-	for (j in 1:nrow(obj)) obj[j,"frequency"] <- length(which(obj$classes[j] == classifiers[[i]][,"Annotation (putative)"]))
-	div_classes <- rbind(div_classes, obj)
-}
 
-# Plot most abundant classes
-pdf(file="classification_classcounts.pdf", encoding="ISOLatin1", pointsize=10, width=10, height=10, family="Helvetica")
-par(mfrow=c(1,1), mar=c(15,4,4,1), oma=c(0,0,0,0), cex.axis=0.8, cex=0.9)
-barplot(div_classes[1:nrow(div_classes),"frequency"], names.arg=gsub('.*\\;','',div_classes[1:nrow(div_classes),"classes"]), las=3, ylab="frequency", main="Most abundant compound classes")
-dev.off()
-
-# Determine how many spectra were classified
-spectra_number <- 27 + 41 # neg + pos
-
-spectra_classified <- sum(length(unique(classifiers[["pos"]]$`Metabolite name`)) +
-						  length(unique(classifiers[["neg"]]$`Metabolite name`)))
-
-classes_order <- readLines(con="classifier/classes.txt")
-classes_order <- classes_order[which(grepl(pattern="^Organic compounds", x=classes_order))]
-classes_order <- gsub(x=classes_order, pattern=":", replacement="")
-classes_order <- gsub(x=classes_order, pattern="/", replacement="; ")
-
-classes <- div_classes$classes
-classes <- classes[which(grepl(pattern="^Organic compounds", x=classes))]
-classes <- gsub(x=classes, pattern=":", replacement="")
-classes <- gsub(x=classes, pattern="/", replacement="; ")
-
-print(paste("Number of merged spectra:", spectra_number))
-print(paste("Number of spectra classified:", spectra_classified))
-print(paste("Number of unclassified spectra:", spectra_number - spectra_classified))
-print(paste("Number of classes:", length(classes_order)))
-print(paste("Number of classes with entities:", length(classes)))
-print(paste("Number of classes without entities:", length(classes_order) - length(classes)))
-print("Classes with entities:")
-print(gsub(x=classes_order[which( (classes_order %in% classes))], pattern=".*; ", replacement=""))
-print("Classes without entities:")
-print(gsub(x=classes_order[which( ! (classes_order %in% classes))], pattern=".*; ", replacement=""))
-
-classes <- classes_order[which(classes_order %in% classes)]
-
-# Count numbers of matched classes in each sample
-class_list <- data.frame(mode=c("pos","neg"))
-for (i in classes) {
-	vec <- NULL
-	for (j in c("pos","neg")) {
-		vec <- as.numeric(c(vec, sum(grepl(pattern=i, x=classifiers[[j]][,"Annotation (putative)"]), na.rm=TRUE)))
-	}
-	class_list <- cbind(class_list, vec)
-}
-colnames(class_list) <- c("mode", gsub(x=classes, pattern=".*\\; ", replacement=""))
-rownames(class_list) <- c("pos","neg")
-write.table(x=t(class_list), file="classifiers_classes.csv", sep=";", quote=TRUE, row.names=TRUE, dec=".")
-
-# Classifiers
-classifiers_pos_class <- get(load("classifier/2018-05-29_18_28_56_2018-02-13_09_14_10_LC-MS-MS_pos_21908.RData"))
-classifiers_neg_class <- get(load("classifier/2018-05-29_18_21_05_2018-02-13_09_14_10_LC-MS-MS_neg_11328.RData"))
-
-# Area under Precision Recall Curve
-classifier_pos_auc <- unlist(lapply(X=classes, FUN = function(x) { for (i in 1:length(classifiers_pos_class)) { if (classifiers_pos_class[[i]]$class==x) { y <- classifiers_pos_class[[i]]$AUC; names(y) <- x; return(y) } } } ))
-classifier_neg_auc <- unlist(lapply(X=classes, FUN = function(x) { for (i in 1:length(classifiers_neg_class)) { if (classifiers_neg_class[[i]]$class==x) { y <- classifiers_neg_class[[i]]$AUC; names(y) <- x; return(y) } } } ))
-
-# True Positive Rate for False Positive Rate of 5 Percent
-classifier_pos_fpr <- unlist(lapply(X=classes, FUN = function(x) { for (i in 1:length(classifiers_pos_class)) { if (classifiers_pos_class[[i]]$class==x) { y <- classifiers_pos_class[[i]]$TPR_for_FPR_of_5Percent; names(y) <- x; return(y) } } } ))
-classifier_neg_fpr <- unlist(lapply(X=classes, FUN = function(x) { for (i in 1:length(classifiers_neg_class)) { if (classifiers_neg_class[[i]]$class==x) { y <- classifiers_neg_class[[i]]$TPR_for_FPR_of_5Percent; names(y) <- x; return(y) } } } ))
-
-# Save table with AUC-PR and TPR-FPR rates
-classifiers_validation <- data.frame(compound_class=gsub(x=classes, pattern='.*\\;', replacement=''))
-classifiers_validation[which(classes %in% names(classifier_pos_auc)), "AUC-PR_pos"] <- classifier_pos_auc
-classifiers_validation[which(classes %in% names(classifier_neg_auc)), "AUC-PR_neg"] <- classifier_neg_auc
-classifiers_validation[which(classes %in% names(classifier_pos_fpr)), "TPR-FPR_pos"] <- classifier_pos_fpr
-classifiers_validation[which(classes %in% names(classifier_neg_fpr)), "TPR-FPR_neg"] <- classifier_neg_fpr
-write.table(x=classifiers_validation, file="classifiers_validation.csv", sep=";", quote=TRUE, row.names=FALSE, dec=".")
+print("---------------------------------------")
+print(classifiers_validation)
+print("---------------------------------------")
+quit()
 
 # Sunburst plot of classes
 source("classifier/sunburst.r")

@@ -44,14 +44,14 @@ mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $polarity
   ]]>
   </command>
   <inputs>
+    <param name="inputmsp" type="data" format="msp" optional="False" label="MSP file" help="The MSP file that contains the MS2 spectra to be classified" />
+    <param name="inputclasses" type="data" format="txt" optional="False" label="Compound classes reference file" help="File containing the reference set of compound classes to which spectra are investigated to" />
+    
     <param name="polarity" type="select" value="positive" optional="False" label="Polarity" help="The polarity used for the mode of acquisition">
       <option value="positive" selected="True">positive</option>
       <option value="negative">negative</option>
     </param>
-    
-    <param name="inputmsp" type="data" format="txt" optional="False" label="MSP file" help="The MSP file that contains the MS2 spectra to be classified" />
-    <param name="inputclasses" type="data" format="txt" optional="False" label="Compound classes reference file" help="File containing the reference set of compound classes to which spectra are investigated to" />
-    
+
     <param name="minimumIntensityOfMaximalMS2peak" type="text" value="10" optional="False" label="Minimum intensity of maximal MS2 peak" help="The minimum intensity a MS2 peak must have with regard to the maximal MS2 peak" />
     <param name="minimumProportionOfMS2peaks" type="text" value="0.005" optional="False" label="Minimum proportion of MS2 peaks" help="Minimum proportion of MS2 peaks" />
     <param name="mzDeviationAbsolutegrouping" type="text" value="0.1" optional="False" label="mz deviation for absolute grouping" help="mz deviation for absolute grouping" />
@@ -93,7 +93,7 @@ mfam-autoclass.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $polarity
     <data name="outputsummary" type="data" format="txt" label="${inputmsp.display_name}_mfam_autoclass_summary.txt" />
     <data name="outputvalidation" type="data" format="tsv" label="${inputmsp.display_name}_mfam_autoclass_validation.tsv" />
     <data name="outputclassesrichness" type="data" format="tsv" label="${inputmsp.display_name}_mfam_autoclass_richness.tsv" />
-    <data name="outputrdata" type="data" format="txt" label="${inputmsp.display_name}_mfam_autoclass.rdata" />
+    <data name="outputrdata" type="data" format="rdata" label="${inputmsp.display_name}_mfam_autoclass.rdata" />
   </outputs>
   <help>
 .. class:: infomark
@@ -160,4 +160,3 @@ Version: 1.0
 
   </help>
 </tool>
-
