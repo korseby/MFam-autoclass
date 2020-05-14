@@ -33,4 +33,7 @@ ADD MetFamily /usr/local/share/MetFamily
 
 # Add scripts
 ADD galaxy/*.r /usr/local/bin/
+ADD galaxy/*.py /usr/local/bin/
 RUN chmod +x /usr/local/bin/*.r
+RUN chmod +x /usr/local/bin/*.py
+
