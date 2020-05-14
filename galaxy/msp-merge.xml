@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tool id="msp-merge" name="msp-merge" version="0.1">
+  <requirements>
+    <container type="docker">korseby/mfam-autoclass</container>
+  </requirements>
+  <description>Merge and validate several MSP files into one resulting MSP file</description>
+  <stdio>
+    <regex match="" source="stderr" level="warning" description="R messages" />
+    <exit_code range="1:" level="fatal" description="Tool error" />
+  </stdio>
+  <command><![CDATA[
+export msp_filenames=' 
+#for $msp_file in $msp_files: 
+${msp_file.name},
+#end for
+';
+mkdir -p /tmp/input_msp;
+for msp_file in `echo $msp_files | perl -pe 's/\,/\n/g'`; do cp \$msp_file /tmp/input_msp/; done;
+echo "msp_merged_file: $msp_merged_file";
+echo "fix_alignment_id: $fix_alignment_id";
+echo "sec_to_min: $sec_to_min";
+echo "min_to_sec: $min_to_sec";
+/usr/local/bin/msp-to-msp.py -i /tmp/input_msp -o $msp_merged_file 
+#if $fix_alignment_id == 'True':
+	-a
+#end if
+#if $sec_to_min == 'True':
+	-m
+#end if
+#if $min_to_sec == 'True':
+	-s
+#end if
+;
+rm -rf /tmp/input_msp;
+  ]]>
+  </command>
+  <inputs>
+    <param name="msp_files" type="data" format="msp" optional="False" multiple="True" label="MSP files" help="Collection of MSP files" />
+    
+    <param name="fix_alignment_id" type="select" value="True" optional="True" label="Make AlignmentID unique" help="Add consecutive numbers as unique AlignmentIDs">
+      <option value="True" selected="True">True</option>
+      <option value="False">False</option>
+    </param>
+
+    <param name="sec_to_min" type="select" value="False" optional="False" label="Convert seconds to minutes" help="Convert seconds to minutes">
+      <option value="True">True</option>
+      <option value="False" selected="True">False</option>
+    </param>
+    
+    <param name="min_to_sec" type="select" value="False" optional="False" label="Convert minutes to seconds" help="Convert minutes to seconds">
+      <option value="True">True</option>
+      <option value="False" selected="True">False</option>
+    </param>
+  </inputs>
+  <outputs>
+    <data name="msp_merged_file" type="data" format="msp" label="msp_merged.msp" />
+  </outputs>
+  <help>
+.. class:: infomark
+
+**Authors**
+
+| **Kristian Peters (kpeters@ipb-halle.de)** wrote and maintains this module.
+
+---------------------------------------------------
+
+=====================
+MSP to MSP Merge Tool
+=====================
+
+-----------
+Description
+-----------
+
+| Merge and validate several MSP files into one resulting MSP file
+
+-----------
+Input files
+-----------
+
++------------------------------+------------+
+| File                         |   Format   |
++==============================+============+
+| 1)  MSP file(s)              |   MSP      |
++------------------------------+------------+
+
+----------
+Parameters
+----------
+	  
+Fix Alignment ID
+        | Create an AlignmentID-field counting from 1 until the number of spectra in the MSP.
+        |
+
+Seconds to Minutes
+        | Convert Retention Time seconds to minutes.
+        |
+
+Minutes to Seconds
+        | Convert Retention Time minutes to seconds.
+        |
+
+------------
+Output files
+------------
+
++------------------------------------------+--------+
+| Files                                    | Format |
++==========================================+========+
+| 1) MSP file                              |  MSP   |
++------------------------------------------+--------+
+
+---------------------------------------------------
+
+-------
+Changes
+-------
+
+Version: 0.1
+        | Intitial release.
+        |
+
+  </help>
+</tool>
+
