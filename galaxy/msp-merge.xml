@@ -20,7 +20,7 @@ echo "msp_merged_file: $msp_merged_file";
 echo "fix_alignment_id: $fix_alignment_id";
 echo "sec_to_min: $sec_to_min";
 echo "min_to_sec: $min_to_sec";
-/usr/local/bin/msp-merge.py -i /tmp/input_msp -o $msp_merged_file 
+msp-merge.py -i /tmp/input_msp -o $msp_merged_file 
 #if $fix_alignment_id == 'True':
 	-a
 #end if
