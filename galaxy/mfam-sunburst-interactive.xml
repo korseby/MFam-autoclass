@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tool id="mfam-sunburst-interactive" name="mfam-sunburst-interactive" version="1.0">
+  <requirements>
+    <container type="docker">korseby/mfam-autoclass</container>
+  </requirements>
+  <description>Sunburst plot of MFam Classifier</description>
+  <stdio>
+    <regex match="" source="stderr" level="warning" description="R messages" />
+    <exit_code range="1:" level="fatal" description="Tool error" />
+  </stdio>
+  <command><![CDATA[
+echo "workingdir: /tmp";
+echo "mfamdir: /usr/local/share/MFam";
+echo "metfamilydir: /usr/local/share/MetFamily";
+echo "inputtsv: $inputtsv";
+echo "method: $method";
+echo "sunbursthtml: $sunbursthtml";
+echo "sunburstcsv: $sunburstcsv";
+
+mfam-sunburst.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $inputtsv $method $sunbursthtml $sunburstcsv;
+  ]]>
+  </command>
+  <inputs>
+    <param name="inputtsv" type="data" format="tsv" optional="False" label="MFam Class-Richness TSV" help="The TSV matrix containing the [merged] MFam Autoclassification classes richness" />
+    
+    <param name="method" type="select" value="sum" optional="False" label="Method" help="The method used when several MFam Classification objects have been merged">
+      <option value="sum" selected="True">sum</option>
+      <option value="mean">mean</option>
+      <option value="median">median</option>
+      <option value="diff">difference</option>
+    </param>
+  </inputs>
+  
+  <outputs>
+    <data name="sunbursthtml" type="data" format="html" label="mfam_autoclass_sunburst_plot.html" />
+    <data name="sunburstcsv" type="data" format="csv" label="mfam_autoclass_sunburst_table.csv" />
+  </outputs>
+  <help>
+.. class:: infomark
+
+**Authors**
+
+| **Kristian Peters (kpeters@ipb-halle.de)** wrote and maintains this module.
+
+---------------------------------------------------
+
+=====================================
+MFam Autoclassification Sunburst plot
+=====================================
+
+-----------
+Description
+-----------
+
+        | Sunburst plot of MFAM Autoclassification
+        | 
+
+-----------
+Input files
+-----------
+
++---------------------------------------------+------------+
+| File                                        |   Format   |
++=============================================+============+
+| 1)  Autoclassification richness matrix      | 1) TSV     |
++---------------------------------------------+------------+
+
+------------
+Output files
+------------
+
++----------------------------------------------------------+----------+
+| Files                                                    | Format   |
++==========================================================+==========+
+| 1) Sunburst plot                                         | 1) HTML  |
+| 2) Sunburst table                                        | 2) CSV   |
++----------------------------------------------------------+----------+
+
+---------------------------------------------------
+
+-------
+Changes
+-------
+
+Version: 1.0
+        | Initial release
+        | 
+
+  </help>
+</tool>
