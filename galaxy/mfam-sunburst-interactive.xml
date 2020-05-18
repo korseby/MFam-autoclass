@@ -17,7 +17,7 @@ echo "method: $method";
 echo "sunbursthtml: $sunbursthtml";
 echo "sunburstcsv: $sunburstcsv";
 
-mfam-sunburst.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $inputtsv $method $sunbursthtml $sunburstcsv;
+mfam-sunburst-interactive.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $inputtsv $method $sunbursthtml $sunburstcsv;
   ]]>
   </command>
   <inputs>
