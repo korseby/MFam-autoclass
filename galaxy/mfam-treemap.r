@@ -22,7 +22,7 @@ options(stringAsfactors=FALSE, useFancyQuotes=FALSE)
 args <- commandArgs(trailingOnly=TRUE)
 if (length(args) < 6) {
 	print("Error! No or not enough arguments given.")
-	print("Usage: $0 working_dir mfam_dir metfamily_dir input_rdata treemap_method treemap_pdf")
+	print("Usage: $0 working_dir mfam_dir metfamily_dir input_tsv treemap_method treemap_pdf")
 	quit(save="no", status=1, runLast=FALSE)
 }
 
@@ -35,8 +35,8 @@ mfam_dir <- as.character(args[2])
 # MetFamily directory
 metfamily_dir <- as.character(args[3])
 
-# input RData object
-input_rdata <- as.character(args[4])
+# input matrix
+input_tsv <- as.character(args[4])
 
 # Parameter: treemap_method (sum | mean | median)
 treemap_method <- as.character(args[5])
@@ -48,26 +48,25 @@ treemap_pdf <- as.character(args[6])
 
 # #################### MFam Autoclassification treemap plot ####################
 # ---------- Load object ----------
-load(file=input_rdata)
-
-# Check if we have a merged object
-if (exists("MFam_Merged_RData")) {
-	print("Merged MFam object detected.")
-} else {
-	print("")
-}
+class_list <- read.table(file=input_tsv, sep="\t", header=TRUE, stringsAsFactors=TRUE)
 
 
 
-# ---------- Sunburst plot of classes ----------
+# ---------- Treemap plot of classes ----------
 # Calculate data matrix
 class_list[is.na(class_list)] <- 0
-if (treemap_method == "sum") {
+if (sunburst_method == "sum") {
 	numberOfSpectra <- as.numeric(unlist(apply(X=class_list, MARGIN=1, FUN = function(x) { sum(x) })))
-} else if (treemap_method == "mean") {
+} else if (sunburst_method == "mean") {
 	numberOfSpectra <- as.numeric(unlist(apply(X=class_list, MARGIN=1, FUN = function(x) { mean(x) })))
-} else if (treemap_method == "median") {
+} else if (sunburst_method == "median") {
 	numberOfSpectra <- as.numeric(unlist(apply(X=class_list, MARGIN=1, FUN = function(x) { median(x) })))
+} else if (sunburst_method == "diff") {
+	numberOfSpectra <- as.numeric(class_list[,1])
+	for (i in c(2:ncol(class_list))) {
+		numberOfSpectra <- numberOfSpectra - as.numeric(class_list[,i])
+	}
+	numberOfSpectra <- abs(numberOfSpectra)
 }
 classifierClasses <- rownames(class_list)
 

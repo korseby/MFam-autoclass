@@ -12,20 +12,21 @@
 echo "workingdir: /tmp";
 echo "mfamdir: /usr/local/share/MFam";
 echo "metfamilydir: /usr/local/share/MetFamily";
-echo "inputrdata: $inputrdata";
+echo "inputtsv: $inputtsv";
 echo "method: $method";
 echo "circtreepdf: $circtreepdf";
 
-mfam-circtree.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $inputrdata $method $circtreepdf;
+mfam-circtree.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $inputtsv $method $circtreepdf;
   ]]>
   </command>
   <inputs>
-    <param name="inputrdata" type="data" format="rdata" optional="False" label="MFam Object RData" help="An RData object of a [merged] MFam Classification" />
+    <param name="inputtsv" type="data" format="tsv" optional="False" label="MFam Class-Richness TSV" help="The TSV matrix containing the [merged] MFam Autoclassification classes richness" />
     
     <param name="method" type="select" value="sum" optional="False" label="Method" help="The method used when several MFam Classification objects have been merged">
       <option value="sum" selected="True">sum</option>
       <option value="mean">mean</option>
       <option value="median">median</option>
+      <option value="diff">difference</option>
     </param>
   </inputs>
   
@@ -59,7 +60,7 @@ Input files
 +---------------------------------------------+------------+
 | File                                        |   Format   |
 +=============================================+============+
-| 1)  RData file                              | 1) RData   |
+| 1)  Autoclassification richness matrix      | 1) TSV     |
 +---------------------------------------------+------------+
 
 ------------
