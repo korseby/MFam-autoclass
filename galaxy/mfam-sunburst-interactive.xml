@@ -3,7 +3,7 @@
   <requirements>
     <container type="docker">korseby/mfam-autoclass</container>
   </requirements>
-  <description>Sunburst plot of MFam Classifier</description>
+  <description>Interactive sunburst plot of MFam Classifier</description>
   <stdio>
     <regex match="" source="stderr" level="warning" description="R messages" />
     <exit_code range="1:" level="fatal" description="Tool error" />
@@ -44,15 +44,15 @@ mfam-sunburst.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $inputtsv 
 
 ---------------------------------------------------
 
-=====================================
-MFam Autoclassification Sunburst plot
-=====================================
+=================================================
+MFam Autoclassification Interactive Sunburst plot
+=================================================
 
 -----------
 Description
 -----------
 
-        | Sunburst plot of MFAM Autoclassification
+        | Interactive Sunburst plot of MFAM Autoclassification
         | 
 
 -----------
