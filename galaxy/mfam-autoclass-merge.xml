@@ -39,8 +39,8 @@ mfam-autoclass-merge.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily /tm
   <outputs>
     <data name="outputplotclassabundance" type="data" format="pdf" label="mfam_autoclass_merged_abundance_plot.pdf" />
     <data name="outputsummary" type="data" format="txt" label="mfam_autoclass_merged_summary.txt" />
-    <data name="outputvalidation" type="data" format="tsv" label="mfam_autoclass_merged_validation.tsv" />
-    <data name="outputclassesrichness" type="data" format="tsv" label="mfam_autoclass_merged_richness.tsv" />
+    <data name="outputvalidation" type="data" format="tabular" label="mfam_autoclass_merged_validation.tsv" />
+    <data name="outputclassesrichness" type="data" format="tabular" label="mfam_autoclass_merged_richness.tsv" />
     <data name="outputrdata" type="data" format="rdata" label="mfam_autoclass_merged.rdata" />
   </outputs>
   <help>

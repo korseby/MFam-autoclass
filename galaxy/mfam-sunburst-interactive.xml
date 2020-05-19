@@ -21,7 +21,7 @@ mfam-sunburst-interactive.r /tmp /usr/local/share/MFam /usr/local/share/MetFamil
   ]]>
   </command>
   <inputs>
-    <param name="inputtsv" type="data" format="tsv" optional="False" label="MFam Class-Richness TSV" help="The TSV matrix containing the [merged] MFam Autoclassification classes richness" />
+    <param name="inputtsv" type="data" format="tabular" optional="False" label="MFam Class-Richness TSV" help="The TSV matrix containing the [merged] MFam Autoclassification classes richness" />
     
     <param name="method" type="select" value="sum" optional="False" label="Method" help="The method used when several MFam Classification objects have been merged">
       <option value="sum" selected="True">sum</option>
@@ -32,8 +32,8 @@ mfam-sunburst-interactive.r /tmp /usr/local/share/MFam /usr/local/share/MetFamil
   </inputs>
   
   <outputs>
-    <data name="sunbursthtml" type="data" format="html" label="mfam_autoclass_sunburst_plot.html" />
-    <data name="sunburstcsv" type="data" format="csv" label="mfam_autoclass_sunburst_table.csv" />
+    <data name="sunbursthtml" type="data" format="html" label="mfam_autoclass_interactive_sunburst_plot.html" />
+    <data name="sunburstcsv" type="data" format="csv" label="mfam_autoclass_interactive_sunburst_table.csv" />
   </outputs>
   <help>
 .. class:: infomark

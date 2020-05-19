@@ -86,7 +86,8 @@ class_tree <- data.frame(paths=gsub(x=rownames(class_list), pattern='\\; ', repl
 sunburst_plot <- sunburst(data=class_tree, count=TRUE)
 
 # Save Sunburst plot
-saveWidget(widget=as_widget(sunburst_plot), file=sunburst_html, selfcontained=TRUE)
+#as_widget()
+saveWidget(widget=sunburst_plot, file=sunburst_html, selfcontained=TRUE)
 
 # Save Sunburst table
 write.csv(data.frame("Classifier classes"=classifierClasses, "Number of spectra"=numberOfSpectra), file=sunburst_csv, row.names=FALSE)
