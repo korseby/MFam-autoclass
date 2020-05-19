@@ -17,7 +17,9 @@ echo "method: $method";
 echo "sunbursthtml: $sunbursthtml";
 echo "sunburstcsv: $sunburstcsv";
 
-mfam-sunburst-interactive.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $inputtsv $method $sunbursthtml $sunburstcsv;
+mfam-sunburst-interactive.r /tmp /usr/local/share/MFam /usr/local/share/MetFamily $inputtsv $method /tmp/sunburst.html $sunburstcsv;
+cat /tmp/sunburst.html | perl -pe 's/<pre><code>//g' | perl -pe 's/<\/code><\/pre>//g' | perl -pe 's/&lt;/</g' | perl -pe 's/&gt;/>/g' | perl -pe 's/&quot;/\"/g' > $sunbursthtml;
+rm /tmp/sunburst.html;
   ]]>
   </command>
   <inputs>
